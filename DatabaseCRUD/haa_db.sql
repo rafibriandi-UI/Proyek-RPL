@@ -101,7 +101,7 @@ CREATE TABLE `report` (
   `assessment_id` varchar(50) NOT NULL,
   `user_id` varchar(50) NOT NULL,
   `user_name` char(100) NOT NULL,
-  `status` enum('HEALTHY','CRICITAL','AT RISK') NOT NULL
+  `status` enum('HEALTHY','CRITICAL','AT RISK') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
