@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2021 at 04:58 AM
+-- Generation Time: Nov 23, 2021 at 02:28 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -107,14 +107,30 @@ CREATE TABLE `report` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `useraccount`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE `useraccount` (
   `user_id` varchar(50) NOT NULL,
   `user_name` char(100) NOT NULL,
   `user_email` varchar(50) NOT NULL,
   `user_password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `userprofile`
+--
+
+CREATE TABLE `userprofile` (
+  `user_id` varchar(50) NOT NULL,
+  `user_name` char(100) NOT NULL,
+  `gender` enum('MALE','FEMALE','','') NOT NULL,
+  `age` int(11) NOT NULL,
+  `height` float NOT NULL,
+  `weight` float NOT NULL,
+  `BMI` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -164,9 +180,15 @@ ALTER TABLE `report`
   ADD KEY `report_ibfk_1` (`user_id`);
 
 --
--- Indexes for table `user`
+-- Indexes for table `useraccount`
 --
-ALTER TABLE `user`
+ALTER TABLE `useraccount`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- Indexes for table `userprofile`
+--
+ALTER TABLE `userprofile`
   ADD PRIMARY KEY (`user_id`);
 
 --
@@ -189,7 +211,13 @@ ALTER TABLE `doctor`
 -- Constraints for table `report`
 --
 ALTER TABLE `report`
-  ADD CONSTRAINT `report_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
+  ADD CONSTRAINT `report_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `useraccount` (`user_id`);
+
+--
+-- Constraints for table `userprofile`
+--
+ALTER TABLE `userprofile`
+  ADD CONSTRAINT `userprofile_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `useraccount` (`user_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
