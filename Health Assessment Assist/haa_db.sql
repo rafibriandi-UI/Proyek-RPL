@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2021 at 02:28 AM
+-- Generation Time: Dec 03, 2021 at 07:19 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -107,6 +107,17 @@ CREATE TABLE `report` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `user_id` varchar(50) NOT NULL,
+  `user_name` char(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `useraccount`
 --
 
@@ -120,10 +131,10 @@ CREATE TABLE `useraccount` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `userprofile`
+-- Table structure for table `userdata`
 --
 
-CREATE TABLE `userprofile` (
+CREATE TABLE `userdata` (
   `user_id` varchar(50) NOT NULL,
   `user_name` char(100) NOT NULL,
   `gender` enum('MALE','FEMALE','','') NOT NULL,
@@ -180,15 +191,21 @@ ALTER TABLE `report`
   ADD KEY `report_ibfk_1` (`user_id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`user_id`);
+
+--
 -- Indexes for table `useraccount`
 --
 ALTER TABLE `useraccount`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- Indexes for table `userprofile`
+-- Indexes for table `userdata`
 --
-ALTER TABLE `userprofile`
+ALTER TABLE `userdata`
   ADD PRIMARY KEY (`user_id`);
 
 --
@@ -214,10 +231,16 @@ ALTER TABLE `report`
   ADD CONSTRAINT `report_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `useraccount` (`user_id`);
 
 --
--- Constraints for table `userprofile`
+-- Constraints for table `useraccount`
 --
-ALTER TABLE `userprofile`
-  ADD CONSTRAINT `userprofile_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `useraccount` (`user_id`);
+ALTER TABLE `useraccount`
+  ADD CONSTRAINT `useraccount_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
+
+--
+-- Constraints for table `userdata`
+--
+ALTER TABLE `userdata`
+  ADD CONSTRAINT `userdata_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
