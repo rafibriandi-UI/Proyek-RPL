@@ -9,26 +9,69 @@
 <html>
 <head>
     <title>Insert Data</title>
+    <link rel="stylesheet" href= "CSS/output.css">
+
 </head>
 <body>
-<!-- Give Servlet reference to the form as an instances
-GET and POST services can be according to the problem statement-->
+
+
 <form action="RegisterServlet" method="post">
-    <p>ID:</p>
-    <!-- Create an element with mandatory name attribute,
-    so that data can be transfer to the servlet using getParameter() -->
-    <input type="text" name="user_id"/>
-    <br/>
-    <p>Name:</p>
-    <input type="text" name="user_name"/>
-    <br/>
-    <p>Email:</p>
-    <input type="text" name="user_email"/>
-    <br/>
-    <p>Password:</p>
-    <input type="password" name="user_password"/>
-    <br/><br/><br/>
-    <input type="submit"/>
+
+    <div class="bg-purple-300 min-h-screen px-12 py-24">
+
+
+        <div class="bg-purple-900  rounded-lg py-7
+                  px-40 " >
+
+            <div class="bg-purple-300 rounded-lg ">
+
+                <p class=" text-center font-bold text-white text-4xl py-7">
+                    SIGN UP
+                </p>
+
+                <p class=" font-bold text-white text-center  py">ID</p>
+
+                <p class="text-center">
+                    <input class=" text-center rounded-lg" type="text" name="user_id"/>
+                    <br/>
+                </p>
+                <p class="font-bold text-white  text-center ">Username</p>
+                <p class="text-center">
+                    <input class=" text-center rounded-lg " type="text" name="user_name"/>
+                    <br/>
+                <p class="font-bold text-white text-center ">Email</p>
+                <p class="text-center">
+                    <input class=" text-center rounded-lg " type="text" name="user_email"/>
+                    <br/>
+                <p class="font-bold text-white text-center ">Password</p>
+                <p class="text-center">
+                    <input class="text-center rounded-lg" type="password" name="user_password"/>
+                    <br/><br/>
+                <p class="text-center">
+                    Already have an account? Sign in
+
+                </p>
+                <br>
+                <div class="flex space-x-0">
+
+                    <div class="px-48">
+                        <input type="submit" class="px-10 py-2 rounded-lg bg-pink-200 " value="SIGN IN">
+                    </div>
+                    <div class="px-0" >
+                        <input type="submit" class="px-10 py-2 rounded-lg bg-pink-200 " value="SIGN UP">
+                    </div>
+                </div>
+
+
+                <br>
+                <br>
+                <br>
+
+
+            </div>
+        </div>
+    </div>
+
 </form>
 </body>
 </html>

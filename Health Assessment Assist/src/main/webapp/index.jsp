@@ -3,8 +3,10 @@
 <html>
 <head>
     <title>JSP - Hello World</title>
+    <link rel="stylesheet" href= "CSS/output.css">
+
 </head>
-<body>
+<body class="text-red-400">
 <h1><%= "Hello World!" %>
 </h1>
 <br/>

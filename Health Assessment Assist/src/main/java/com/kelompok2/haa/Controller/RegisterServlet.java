@@ -4,12 +4,8 @@ import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import java.io.IOException;
-import java.sql.DriverManager;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import com.kelompok2.haa.DAO.RegisterDAO;
-import com.kelompok2.haa.Model.Register;
 import com.kelompok2.haa.DAO.DbConnector;
 
 
@@ -26,8 +22,9 @@ public class RegisterServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
+            throws ServletException, IOException,IllegalStateException
     {
+         //Error handling
           try
           {
               //Initialize database connection
@@ -47,15 +44,17 @@ public class RegisterServlet extends HttpServlet {
               //Execute query statement
               ps.executeUpdate();
 
-              //Indicator that data insertion is successful
-              response.sendRedirect("SuccessLogin.jsp");
+              //Close connection
+              ps.close();
+              con.close();
           }
           catch (Exception e)
           {
-              // TODO Auto-generated catch block
-              e.printStackTrace();
+              response.sendRedirect("ErrorRegister.jsp");
           }
-          response.sendRedirect("ErrorLogin.jsp");
+
+        //Indicator that data insertion is successful
+        response.sendRedirect("SuccessRegister.jsp");
     }
 
 
