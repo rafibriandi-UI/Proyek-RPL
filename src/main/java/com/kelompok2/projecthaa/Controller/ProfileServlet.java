@@ -30,7 +30,6 @@ public class ProfileServlet extends HttpServlet {
         //Request parameter
 
         String getAssessment = request.getParameter("assessment");
-        String getHistory = request.getParameter("history");
         String getMenu = request.getParameter("menu");
         String getLogOut = request.getParameter("logout");
 

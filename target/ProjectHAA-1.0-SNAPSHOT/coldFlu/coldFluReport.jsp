@@ -14,7 +14,7 @@
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
 <div class="min-h-screen bg-pink-200 flex flex-col justify-center">
-    <a href="/index.jsp" class=" font-black text-purple-900 px-14 py-14 text-2xl">Back</a>
+
     <div class="py-3">
         <div class="max-w-xl mx-auto">
             <body>

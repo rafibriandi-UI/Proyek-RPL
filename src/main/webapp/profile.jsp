@@ -10,11 +10,10 @@
     <div class="bg-purple-900 min-h-screen py-10 px-32 pr-36">
         <div class="bg-pink-300 rounded-lg py-5 ">
 
-            <div >
-                <button  class="bg-pink-300 text-white text-2xl font-bold px-16 " type="submit" name="assessment" value="ASSESSMENT"> ASSESSMENT</button>
-                <button  class="bg-pink-300 text-white text-2xl font-bold px-16 " type="submit" name="history" value="HISTORY"> HISTORY</button>
-                <button class="bg-pink-300 text-white text-2xl font-bold px-16" type="submit" name="menu" value="MENU"> MENU</button>
-                <button  class="bg-pink-300 text-white text-2xl font-bold px-16 " type="submit" name="logout" value="LOGOUT"> LOGOUT</button>
+            <div class="flex justify-center">
+                <button  class="bg-pink-300 text-white text-2xl font-bold px-16 " type="submit" name="assessment" value="assessment"> ASSESSMENT</button>
+                <button class="bg-pink-300 text-white text-2xl font-bold px-16" type="submit" name="menu" value="menu"> MENU</button>
+                <button  class="bg-pink-300 text-white text-2xl font-bold px-16 " type="submit" name="logout" value="logout"> LOGOUT</button>
             </div>
         </div>
         <div class="divide-x-0 grid grid-cols-3 pr-48 ">
@@ -65,20 +64,20 @@
                         </p>
                     </div>
                     <div class="py-11">
-                        <input class="rounded-lg text-center" type="text">
+                        <input class="rounded-lg text-center" type="text" value="${t.user_name}">
                     </div>
                     <div class="py-0">
-                        <input class="rounded-lg text-center" type="text">
+                        <input class="rounded-lg text-center" type="text" value="${t.email}">
                     </div>
                     <div class="py-9">
-                        <input class="rounded-lg text-center" type="text">
+                        <input class="rounded-lg text-center" type="text" value="${t.weight}">
                     </div>
                     <div class="py-1">
-                        <input class="rounded-lg text-center" type="text">
+                        <input class="rounded-lg text-center" type="text" value="${t.height}">
                     </div>
                     <div class="py-10
                     ">
-                        <input class="rounded-lg text-center" type="text">
+                        <input class="rounded-lg text-center" type="text" value="${BMI}">
                     </div>
 
                 </div>

@@ -31,7 +31,7 @@
                 </p>
             </div>
             <div class="py-48 px-48">
-                <input class="rounded-lg text-white text-2xl outline outline-offset-2 outline-white px-7 " type="submit" value="READ MORE">
+                <button class="rounded-lg text-white text-2xl outline outline-offset-2 outline-white px-7 " type="submit" formaction="https://drive.google.com/drive/folders/1f3h5ZMPu43tuPDOCSeLDo59FHKFETwxr"></button>
             </div>
         </div>
         <div class=" py-4">
@@ -44,7 +44,7 @@
             </div>
 
             <div class="px-4 py-11">
-                <button class="bg-purple-900 text-white rounded-lg px-40 text-6xl font-bold" type="submit" ><a href="">LOGOUT</a></button>
+                <button class="bg-purple-900 text-white rounded-lg px-40 text-6xl font-bold" type="submit" ><a href="index.jsp">LOGOUT</a></button>
             </div>
         </div>
     </div>

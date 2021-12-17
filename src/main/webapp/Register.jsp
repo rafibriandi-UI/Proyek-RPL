@@ -53,17 +53,17 @@
 
                 </p>
                 <br>
-                <div class="flex space-x-0">
+                <div class="flex justify-center">
 
-                    <div class="px-48">
+                    <div class="px-40">
                         <button type="button" class="px-10 py-2 rounded-lg bg-pink-200 "><a href="index.jsp">SIGN IN</a></button>
                     </div>
-                    <div class="px-0" >
+                    <div class="px-0">
                         <input type="submit" class="px-10 py-2 rounded-lg bg-pink-200 " name="login" value="SIGN UP">
                     </div>
                 </div>
 
-                ${notes}
+                <p class="font-bold mx-8 text-white w-auto flex justify-center">${notes}</p>
 
                 <br>
                 <br>
