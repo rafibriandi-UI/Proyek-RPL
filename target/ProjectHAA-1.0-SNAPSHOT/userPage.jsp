@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>UserPage</title>
+    <title>Main Page</title>
     <link rel="stylesheet" href= "styles.css">
 </head>
 <body>
@@ -31,7 +31,7 @@
                 </p>
             </div>
             <div class="py-48 px-48">
-                <input class="rounded-lg text-white text-2xl outline outline-offset-2 outline-white px-7 " type="submit" value="READ MORE">
+                <button class="rounded-lg text-white text-2xl outline outline-offset-2 outline-white px-7 " type="submit" formaction="https://drive.google.com/drive/folders/1f3h5ZMPu43tuPDOCSeLDo59FHKFETwxr"></button>
             </div>
         </div>
         <div class=" py-4">

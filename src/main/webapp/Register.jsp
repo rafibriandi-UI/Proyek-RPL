@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Insert Data</title>
+    <title>Registration</title>
     <link rel="stylesheet" href= "styles.css">
 
 </head>

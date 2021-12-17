@@ -1,7 +1,7 @@
 <%@ page import="com.kelompok2.projecthaa.Controller.userDataServlet" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>User Data</title>
 </head>
 
 <link href="styles.css" rel="stylesheet">
