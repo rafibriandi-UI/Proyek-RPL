@@ -15,7 +15,7 @@
 
 <div class="min-h-screen bg-pink-200 flex flex-col justify-center">
 
-    <a href="generalRisk?assessmentId=1&disease=diabetest1" class=" font-black text-purple-900 px-14 py-14 text-2xl">Back</a>
+    <a href="generalRisk?assessmentId=1&disease=diabetest1" class="w-52 font-black text-purple-900 px-14 py-14 text-2xl">Back</a>
     <div class="relative py-3 sm:max-w-xl sm:mx-auto">
         <div class="max-w-lg mx-auto">
             <body>
@@ -64,7 +64,7 @@
 
                 <br>
 
-                <button type="submit" class="font-body text-white shadow-md container py-1 bg-pink-200 appearance-none rounded-lg focus:outline-none focus:ring-2">Generate Report</button>
+                <button type="submit" class="font-body text-white shadow-md container py-1 bg-purple-800 appearance-none rounded-lg focus:outline-none focus:ring-2">Generate Report</button>
 
             </form>
 

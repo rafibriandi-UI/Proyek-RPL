@@ -75,10 +75,15 @@
                     <div class="py-1">
                         <input class="rounded-lg text-center" type="text" value="${t.height}">
                     </div>
-                    <div class="py-10
-                    ">
+                    <br>
+                    <div class="py-1">
                         <input class="rounded-lg text-center" type="text" value="${BMI}">
-                    </div>
+                    </div><br>
+                    <button type="submit" class="font-body text-white shadow-md container py-1 bg-purple-800 appearance-none rounded-lg focus:outline-none focus:ring-2">Update Data</button><br>
+
+
+                </div>
+                <br>
 
                 </div>
 

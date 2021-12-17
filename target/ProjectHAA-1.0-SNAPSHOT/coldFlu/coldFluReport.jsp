@@ -21,6 +21,7 @@
             <div class="container bg-purple-500 rounded-2xl px-8 py-8">
 
                 <h1 class="h-12 font-black text-purple-900 px-20 text-3xl text-center">REPORT</h1>
+                <h1 class="h-12 font-black text-purple-900 px-20 text-3xl text-center">Is it cold or Flu?</h1><br>
 
                 <div class="container max-w-xs mx-auto ${color} rounded-lg py-4 my-5">
                     <h2 class="text-xl font-bold text-white text-center">${riskLevel}</h2><br>
@@ -30,9 +31,7 @@
                 <div>
                     <h2 class="font-bold text-lg">Brief Explanation :</h2>
                     <div class="text-white text-justify">
-                        <p>CVD is a type of condition that affects the working of one's heart.
-                            The effect varies from stroke, heart failure, carditis, and more. This condition can be potentially
-                            developed from smoking, high blood pressure, diabetes, lack of exercise, and more.
+                        <p>Cold/Flu is common disease that affects our upper body part that includes nose, throat, sinuses, and larynx where it can be infected by this virus.
                         </p><br>
                     </div>
                 </div>
@@ -40,9 +39,7 @@
                 <div>
                     <h2 class="font-bold text-lg">Condition Review :</h2>
                     <div class="text-white text-justify">
-                        <p>Symptoms can be identified by having chills/cold from the body and runny nose,
-                            furthermore coughs with pleghm indicates the larynx are affected by the disease.                        </p><br>
-                    </div>
+                        <p>Symptoms can be identified by having chills/cold from the body and runny nose, furthermore coughs with pleghm indicates the larynx are affected by the disease.</p><br></div>
                 </div>
 
                 ${riskLevel == "Low Risk" ? '<div><h2 class="font-bold text-lg">Suggestion :</h2><div class="text-white text-justify"><p>Consult to a doctor or buy a light cold/flu medicine.</p><br></div></div>' : " " }

@@ -334,6 +334,9 @@ public class generalRiskCalculator extends userData {
                 case "low":
                     risk2 = 5;
                     break;
+                case "medium":
+                    risk2 = 27;
+                    break;
                 default:
                     throw new IllegalStateException("Unexpected value: " + physicalActivity);
             }

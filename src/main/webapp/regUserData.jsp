@@ -7,6 +7,7 @@
 <link href="styles.css" rel="stylesheet">
 
 <div class="min-h-screen bg-pink-200 flex-col justify-center sm:py-12">
+    <a href="userPage.jsp" class=" font-black text-purple-900 px-14 py-14 text-2xl">Back</a>
     <div class="relative py-3 sm:max-w-xl sm:mx-auto">
         <div class="max-w-lg mx-auto">
             <body>

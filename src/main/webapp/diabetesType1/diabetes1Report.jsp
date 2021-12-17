@@ -21,6 +21,7 @@
             <div class="container bg-purple-500 rounded-2xl px-8 py-8">
 
                 <h1 class="h-12 font-black text-purple-900 px-20 text-3xl text-center">REPORT</h1>
+                <h1 class="h-12 font-black text-purple-900 px-20 text-3xl text-center">Diabetes Type 1 Assessment</h1><br>
 
                 <div class="container max-w-xs mx-auto ${color} rounded-lg py-4 my-5">
                     <h2 class="text-xl font-bold text-white text-center">${riskLevel}</h2><br>
