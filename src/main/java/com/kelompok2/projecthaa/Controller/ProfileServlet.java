@@ -18,7 +18,7 @@ public class ProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-
+        request.getRequestDispatcher("profile.jsp").forward(request, response);
     }
 
     @Override
@@ -36,13 +36,11 @@ public class ProfileServlet extends HttpServlet {
 
         //URL redirects for each button
         if (getAssessment != null && getAssessment.equals("assessment")) {
-            request.getRequestDispatcher("Login.jsp").forward(request, response);
-        } else if (getHistory != null && getHistory.equals("history")) {
-            request.getRequestDispatcher("Login.jsp").forward(request, response);
+            request.getRequestDispatcher("userData").forward(request, response);
         } else if (getMenu != null && getMenu.equals("menu")) {
-            request.getRequestDispatcher("UserPage.jsp").forward(request, response);;
+            request.getRequestDispatcher("userPage.jsp").forward(request, response);;
         } else if (getLogOut != null && getLogOut.equals("logout")) {
-            request.getRequestDispatcher("Login.jsp").forward(request, response);
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         }
         else {
             //Error handling

@@ -14,7 +14,7 @@
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
 <div class="min-h-screen bg-pink-200 flex flex-col justify-center">
-    <a href="/index.jsp" class=" font-black text-purple-900 px-14 py-14 text-2xl">Back</a>
+
     <div class="py-3">
         <div class="max-w-xl mx-auto">
             <body>
@@ -71,28 +71,15 @@
                     </div>
                 </div>
 
-                <div>
-                    <h2 class="font-bold text-lg">Suggestion :</h2>
-                    <div class="text-white text-justify">
-                        <p>With few known symptoms you are less likely to have sinusitis, however make sure to underlying
-                            conditions such as allergies and asthma are well controlled may improve the symptoms of chronic sinusitis.
-                        </p><br>
-                    </div>
-                </div>
+                ${riskLevel == "Low Risk" ? '<div><h2 class="font-bold text-lg">Suggestion :</h2><div class="text-white text-justify"><p> You should keep observe your condition, if you feels the symptoms wont get away in a few days, than you should check yourself to the doctor.</p><br></div></div>' : " " }
 
-                <div>
-                    <h2 class="font-bold text-lg">Suggestion :</h2>
-                    <div class="text-white text-justify">
-                        <p>when the first symptom (yellow discharge from your nose) is present, there is a high enough chance
-                            that you have sinusitis so you need to be sure with your doctor, if not please make sure to underlying
-                            conditions such as allergies and asthma are well controlled may improve the symptoms of chronic sinusitis
-                            in few days, if the symptoms not dissappearing then the best way is to see doctor immedietly.
-                        </p></div>
-                </div>
+                ${riskLevel == "Medium Risk" ? '<div><h2 class="font-bold text-lg">Suggestion :</h2><div class="text-white text-justify"><p>Since Malaria will get worse every time, even if you dont feel all the symptoms mention before, you should go right away to the doctor in case what you feels is trully the symptoms of malaria.' : " " }
+
+                ${riskLevel == "High Risk" ? 'You possibly have malaria, please check your condition to the doctor immediately to get a proper treatment.' : " "}
 
                 <div class="container max-w-xs mx-auto py-4 my-5">
                     <button type="button" class="font-bold text-white shadow-md container max-w-xs mx-auto py-2 bg-pink-300 rounded-lg focus:ring-2">
-                        <a href="/${pageContext.request.contextPath}.jsp">Save Report</a></button>
+                        <a href="/UserPageServlet">Save Report</a></button>
                 </div>
 
             </div>

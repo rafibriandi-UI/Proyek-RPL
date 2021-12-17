@@ -17,7 +17,7 @@
 
 
     <div class="min-h-screen bg-pink-200 px-8 py-16 justify sm:py-12">
-        <a href="/index.jsp" class=" font-black text-purple-900 px-14 py-14 text-2xl">Back</a>
+        <a href="userData" class=" font-black text-purple-900 px-14 py-14 text-2xl">Back</a>
 
 
         <div class=" relative my-12 mx-40 px-8 py-16 bg-white shadow-lg transform -skew-y-6 sm:skew-y-0 sm:rounded-2xl">

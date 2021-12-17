@@ -27,15 +27,17 @@ public class BMI {
         String message;
 
         if (BMI <= 18.4) {
-            message = "Berat Badan Kurang";
-        } else if (BMI > 18.4 || BMI <= 24.9) {
-            message = "Berat Badan Ideal";
-        } else if (BMI > 24.9 || BMI <= 29.9) {
-            message = "Berat Badan Lebih";
-        } else if (BMI > 29.9 || BMI <= 39.9) {
-            message = "Gemuk";
+            message = "Underweight";
+        } else if (BMI < 24.9) {
+            message = "Normal weight";
+        } else if (BMI < 29.9) {
+            message = "Overweight";
+        } else if (BMI < 35.0) {
+            message = "Obesity class 1";
+        } else if (BMI < 39.9) {
+            message = "Obesity class 2";
         } else {
-            message = "Sangat Gemuk";
+            message = "Obesity class 3";
         }
         return message;
     }

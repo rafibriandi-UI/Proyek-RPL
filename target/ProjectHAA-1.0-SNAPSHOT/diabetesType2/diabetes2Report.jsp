@@ -46,35 +46,15 @@
                     </div>
                 </div>
 
-                <div>
-                    <h2 class="font-bold text-lg">Suggestion :</h2>
-                    <div class="text-white text-justify">
-                        <p>Keep your blood glucose levels as near to normal as possible by following a diet plan,
-                            taking prescribed medication and increasing your activity level.
-                        </p><br>
-                    </div>
-                </div>
+                ${riskLevel == "Low Risk" ? '<div><h2 class="font-bold text-lg">Suggestion :</h2><div class="text-white text-justify"><p>Keep your blood glucose levels as near to normal as possible by following a diet plan, taking prescribed medication and increasing your activity level.</p><br></div></div>' : "" }
 
-                <div>
-                    <h2 class="font-bold text-lg">Suggestion :</h2>
-                    <div class="text-white text-justify">
-                        <p>Keeping your appointments with your healthcare providers and having
-                            laboratory tests completed as ordered by your doctor.
-                        </p><br>
-                    </div>
-                </div>
+                ${riskLevel == "Medium Risk" ? '<div><h2 class="font-bold text-lg">Suggestion :</h2><div class="text-white text-justify"><p>Keeping your appointments with your healthcare providers and havinglaboratory tests completed as ordered by your doctor.</p><br></div></div>' : " " }
 
-                <div>
-                    <h2 class="font-bold text-lg">Suggestion :</h2>
-                    <div class="text-white text-justify">
-                        <p>Get an appointment with doctor in hospital  to get further treatment.
-                        </p><br>
-                    </div>
-                </div>
+                ${riskLevel == "High Risk" ? '<div><h2 class="font-bold text-lg">Suggestion :</h2><div class="text-white text-justify"><p>Get an appointment with doctor in hospital  to get further treatment.</p><br></div></div>' : " " }
 
                 <div class="container max-w-xs mx-auto py-4 my-5">
                     <button type="button" class="font-bold text-white shadow-md container max-w-xs mx-auto py-2 bg-pink-300 rounded-lg focus:ring-2">
-                        <a href="/${pageContext.request.contextPath}.jsp">Save Report</a></button>
+                        <a href="/UserPageServlet">Save Report</a></button>
                 </div>
 
             </div>

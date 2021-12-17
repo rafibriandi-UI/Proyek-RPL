@@ -51,13 +51,13 @@
                     </div>
                 </div>
 
-                ${riskLevel == "Low Risk" ? '<div><h2 class="font-bold text-lg">Suggestion :</h2><div class="text-white text-justify"><p>Your risk of having a diabetes type 1 isnt high, we suggest you to taka careof your body carefully, from what you eat, drink, and avoid sugar.</p><br></div></div>' : "" }
+                ${riskLevel == "Low Risk" ? '<div><h2 class="font-bold text-lg">Suggestion :</h2><div class="text-white text-justify"><p>Your risk of having a diabetes type 1 isnt high, but we still suggest you to taka careof your body carefully, from what you eat, drink, and avoid sugar.</p><br></div></div>' : "" }
 
                 ${riskLevel == "Medium Risk" || riskLevel == "High Risk" ? '<div><h2 class="font-bold text-lg">Suggestion :</h2><div class="text-white text-justify"><p>Because Type 1 diabetes is an autoimmune disease, meaning your body attacks itself if you really have it, betterfor you to consult a doctor to get further medical check up to make sure things so that it wont get worse.</p><br></div></div>' : ""}
 
                 <div class="container max-w-xs mx-auto py-4 my-5">
-                    <button type="button" class="font-bold text-white shadow-md container max-w-xs mx-auto py-2 bg-pink-300 rounded-lg focus:ring-2">
-                        <a href="/${pageContext.request.contextPath}.jsp">Save Report</a></button>
+                    <button type="button" class="font-bold text-white shadow-md container max-w-xs mx-auto py-2 bg-purple-800 rounded-lg focus:ring-2">
+                        <a href="/UserPageServlet">Save Report</a></button>
                 </div>
 
             </div>

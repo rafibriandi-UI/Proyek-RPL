@@ -42,9 +42,7 @@
             <div class="px-4 py-11">
                 <button class="bg-purple-900 text-white rounded-lg px-24 text-6xl font-bold" type="submit" ><a href="userData">ASSESSMENT</a></button>
             </div>
-            <div class="px-4 py-11">
-                <button class="bg-purple-900 text-white rounded-lg px-40 text-6xl font-bold" type="submit" ><a href="">HISTORY</a></button>
-            </div>
+
             <div class="px-4 py-11">
                 <button class="bg-purple-900 text-white rounded-lg px-40 text-6xl font-bold" type="submit" ><a href="">LOGOUT</a></button>
             </div>

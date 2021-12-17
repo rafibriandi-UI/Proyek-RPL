@@ -14,7 +14,7 @@
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
 <div class="min-h-screen bg-pink-200 flex flex-col justify-center">
-    <a href="/index.jsp" class=" font-black text-purple-900 px-14 py-14 text-2xl">Back</a>
+
     <div class="py-3">
         <div class="max-w-xl mx-auto">
             <body>
@@ -45,33 +45,15 @@
                     </div>
                 </div>
 
-                <div>
-                    <h2 class="font-bold text-lg">Suggestion :</h2>
-                    <div class="text-white text-justify">
-                        <p>Consult to a doctor or buy a light cold/flu medicine.
-                        </p><br>
-                    </div>
-                </div>
+                ${riskLevel == "Low Risk" ? '<div><h2 class="font-bold text-lg">Suggestion :</h2><div class="text-white text-justify"><p>Consult to a doctor or buy a light cold/flu medicine.</p><br></div></div>' : " " }
 
-                <div>
-                    <h2 class="font-bold text-lg">Suggestion :</h2>
-                    <div class="text-white text-justify">
-                        <p>Consult to a doctor for specific drug prescription to handle the cold/flu
-                        </p><br>
-                    </div>
-                </div>
+                ${riskLevel == "Medium Risk" ? '<div><h2 class="font-bold text-lg">Suggestion :</h2><div class="text-white text-justify"><p>Consult to a doctor for specific drug prescription to handle the cold/flu</p><br></div></div>' : " " }
 
-                <div>
-                    <h2 class="font-bold text-lg">Suggestion :</h2>
-                    <div class="text-white text-justify">
-                        <p>Directly go to specialist doctor for further check-up and treatments.
-                        </p><br>
-                    </div>
-                </div>
+                ${riskLevel == "High Risk" ? '<div><h2 class="font-bold text-lg">Suggestion :</h2><div class="text-white text-justify"><p>Directly go to specialist doctor for further check-up and treatments.</p><br></div></div>' : " " }
 
                 <div class="container max-w-xs mx-auto py-4 my-5">
                     <button type="button" class="font-bold text-white shadow-md container max-w-xs mx-auto py-2 bg-pink-300 rounded-lg focus:ring-2">
-                        <a href="/${pageContext.request.contextPath}.jsp">Save Report</a></button>
+                        <a href="/UserPageServlet">Save Report</a></button>
                 </div>
 
             </div>
