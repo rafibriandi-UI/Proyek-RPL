@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="HAA Database" uuid="87667ed5-5160-4b19-aa48-cdb47d1fb704">
-      <synchronize>true</synchronize>
-      <configured-by-url>true</configured-by-url>
-      <jdbc-driver>java.sql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/haa_db</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="User Data Source" uuid="4ae27aaa-ef3a-4a23-97bf-e39d43af02fa">
-      <driver-ref>ada69fa7-4942-4aaa-aac6-d4af8d103ca3</driver-ref>
-      <synchronize>true</synchronize>
-      <configured-by-url>true</configured-by-url>
-      <jdbc-driver>java.sql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/haa_db</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="MySQL - haa_db@localhost" uuid="99f31489-6b00-4c14-8ab8-18d5e25276a9">
+    <data-source source="LOCAL" name="haa_db" uuid="31dbf34c-3311-4a45-94f8-5aedf28ab14f">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>

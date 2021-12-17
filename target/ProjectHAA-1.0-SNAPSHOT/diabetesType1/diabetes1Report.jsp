@@ -14,7 +14,7 @@
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
 <div class="min-h-screen bg-pink-200 flex flex-col justify-center">
-    <a href="/index.jsp" class=" font-black text-purple-900 px-14 py-14 text-2xl">Back</a>
+    <a href="/index.jsp" class=" font-black w-52 text-purple-900 px-14 py-14 text-2xl">Back</a>
     <div class="py-3">
         <div class="max-w-xl mx-auto">
             <body>
@@ -22,17 +22,9 @@
 
                 <h1 class="h-12 font-black text-purple-900 px-20 text-3xl text-center">REPORT</h1>
 
-<%--                <div class="container max-w-xs mx-auto bg-red-400 rounded-lg py-4 my-5">--%>
-<%--                    <h2 class="text-xl font-bold text-white text-center">High Risk</h2><br>--%>
-<%--                </div>--%>
-
                 <div class="container max-w-xs mx-auto ${color} rounded-lg py-4 my-5">
                     <h2 class="text-xl font-bold text-white text-center">${riskLevel}</h2><br>
                 </div>
-
-<%--                <div class="container max-w-xs mx-auto bg-green-400 rounded-lg py-4 my-5">--%>
-<%--                    <h2 class="text-xl font-bold text-white text-center">Low Risk</h2><br>--%>
-<%--                </div>--%>
 
                 <br>
                 <div>
@@ -59,23 +51,9 @@
                     </div>
                 </div>
 
-                <div>
-                    <h2 class="font-bold text-lg">Suggestion :</h2>
-                    <div class="text-white text-justify">
-                        <p>Because Type 1 diabetes is an autoimmune disease, meaning your body attacks itself, better
-                            for you to consult a doctor to get further treatment.
-                        </p><br>
-                    </div>
-                </div>
-                <!--
-                                <div>
-                                    <h2 class="font-bold text-lg">Suggestion :</h2>
-                                    <div class="text-white text-justify">
-                                        <p>Consult to a doctor for medicine and do a self-isolation at home or public-isolations
-                                            that was provided by public health services.
-                                        </p><br>
-                                    </div>
-                                </div> -->
+                ${riskLevel == "Low Risk" ? '<div><h2 class="font-bold text-lg">Suggestion :</h2><div class="text-white text-justify"><p>Your risk of having a diabetes type 1 isnt high, we suggest you to taka careof your body carefully, from what you eat, drink, and avoid sugar.</p><br></div></div>' : "" }
+
+                ${riskLevel == "Medium Risk" || riskLevel == "High Risk" ? '<div><h2 class="font-bold text-lg">Suggestion :</h2><div class="text-white text-justify"><p>Because Type 1 diabetes is an autoimmune disease, meaning your body attacks itself if you really have it, betterfor you to consult a doctor to get further medical check up to make sure things so that it wont get worse.</p><br></div></div>' : ""}
 
                 <div class="container max-w-xs mx-auto py-4 my-5">
                     <button type="button" class="font-bold text-white shadow-md container max-w-xs mx-auto py-2 bg-pink-300 rounded-lg focus:ring-2">

@@ -23,16 +23,17 @@
                         <div >
                             <p class="font-bold text-white ml-14   ">
                                 Email
-                                <input class=" text-center text-slate-900 rounded-lg px ml-8 " type="text" name="user_name"/>
+                                <input class=" text-center text-black rounded-lg px ml-8 " type="text" name="user_id"/>
                             </p>
                         </div>
                         <div >
                             <p class="font-bold text-white ml-14   ">
                                 Password
-                                <input class=" text-center text-slate-900 rounded-lg px ml-1 " type="password" name="user_name"/>
+                                <input class=" text-center text-black rounded-lg px ml-1 " type="password" name="user_password"/>
                             </p>
                         </div>
                         <br>
+                        ${notes}
                         <br>
                         <p class="px-6">
                             Don't have an account? hit sign up to register!
@@ -40,10 +41,10 @@
                         <div class="flex space-x-0">
 
                             <div class="px-2">
-                                <input type="submit" class="px-10 py-2 rounded-lg bg-pink-200 " value="SIGN IN">
+                                <button type="submit" class="px-10 py-2 rounded-lg bg-pink-200 " name="register" value="SIGN IN">SIGN IN</button>
                             </div>
                             <div class="px-20" >
-                                <input type="submit" class="px-10 py-2 rounded-lg bg-pink-200 " value="SIGN UP">
+                                <button type="submit" class="px-10 py-2 rounded-lg bg-pink-200 " name="register" value="SIGN UP">SIGN UP</button>
                             </div>
                         </div>
                     </div>

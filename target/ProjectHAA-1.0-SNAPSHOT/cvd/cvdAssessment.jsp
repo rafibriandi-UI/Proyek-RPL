@@ -19,7 +19,7 @@
         <div class="max-w-lg mx-auto">
             <body>
 
-            <form method="post" action="/assessment/cvd" class="relative px-10 py-16 bg-purple-400 shadow-lg transform sm:rounded-2xl">
+            <form method="post" action="cvd" class="relative px-10 py-16 bg-purple-400 shadow-lg transform sm:rounded-2xl">
 
                 <h1 class="h-12 font-black text-purple-900 px-20 text-2xl">CVD Assessment</h1>
                 <h2 class="h-2 font-bold text-purple-700 px-20 text-justify">Possible Symptomps</h2><br>
@@ -52,12 +52,13 @@
                     <option value="unsure">unsure</option>
                 </select><br>
 
-                <label for="symptoms5" class="py-3 font-body flex text-lg text-white place-content-center">light-headedness or faintness.</label>
+                <label for="symptoms5" class="py-3 font-body flex text-lg text-white justify-center">light-headedness or faintness.</label>
                 <select class="p-1 appearance-none rounded-lg focus:outline-none focus:ring-2" type="number" id="symptoms5" name="symptoms5"><br>
                     <option value="yes" >yes</option>
                     <option value="no">no</option>
                 </select><br>
 
+                <input id="genRisk" name="genRisk" value="${genRisk}">
                 <!--<label for="symptoms6" class="py-3 font-body flex text-lg text-white place-content-center">cold sweat and turning pale.</label>
                 <input class="p-1 appearance-none rounded-lg focus:outline-none focus:ring-2" type="number" id="symptoms6" name="symptoms6"><br>
 
@@ -66,8 +67,8 @@
                 -->
                 <br>
 
-                <button type="submit" class="font-body text-white shadow-md container py-1 bg-pink-200 appearance-none rounded-lg focus:outline-none focus:ring-2">
-                    <a href="/cvd/cvdReport.jsp">Generate Report</a></button>
+                <button type="submit" class="font-body text-white shadow-md container py-1 bg-pink-200 appearance-none rounded-lg focus:outline-none focus:ring-2">Generate Report</button>
+
             </form>
             </body>
         </div>

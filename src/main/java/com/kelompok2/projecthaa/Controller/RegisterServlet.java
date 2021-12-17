@@ -1,15 +1,12 @@
 package com.kelompok2.projecthaa.Controller;
 
-import com.kelompok2.projecthaa.DAO.DbConnector;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import com.kelompok2.projecthaa.DAO.DbConnector;
 
 
 @WebServlet(name = "RegisterServlet",value = "/RegisterServlet")
@@ -25,37 +22,45 @@ public class RegisterServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {
-          try
-          {
-              //Initialize database connection
-              Connection con = com.kelompok2.projecthaa.DAO.DbConnector.getDbConnection();
+            throws ServletException, IOException,IllegalStateException {
+        //Variable for register parameter
+        String getLogin = request.getParameter("login");
+        String notes = "Registration Successful!";
 
-              //Create SQL Query to put data into table
-              String query = "INSERT INTO useraccount(user_id,user_name,user_email,user_password)" +
-                              "VALUES(?,?,?,?)";
-              PreparedStatement ps = con.prepareStatement(query);
+        //URL redirects for register
+        if (getLogin != null && getLogin.equals("SIGN IN")) {
+            response.sendRedirect("index.jsp");
+        }
+        else {
+            //Error handling
+            try {
+                //Initialize database connection
+                Connection con = com.kelompok2.projecthaa.DAO.DbConnector.getDbConnection();
 
-              //get data using request object
-              ps.setString(1,request.getParameter("user_id"));
-              ps.setString(2, request.getParameter("user_name"));
-              ps.setString(3, request.getParameter("user_email"));
-              ps.setString(4, request.getParameter("user_password"));
+                //Create SQL Query to put data into table
+                String query = "INSERT INTO useraccount(user_id,user_name,user_email,user_password)" +
+                        "VALUES(?,?,?,?)";
+                PreparedStatement ps = con.prepareStatement(query);
 
-              //Execute query statement
-              ps.executeUpdate();
+                //get data using request object
+                ps.setString(1, request.getParameter("user_id"));
+                ps.setString(2, request.getParameter("user_name"));
+                ps.setString(3, request.getParameter("user_email"));
+                ps.setString(4, request.getParameter("user_password"));
 
-              //Indicator that data insertion is successful
-              response.sendRedirect("SuccessLogin.jsp");
-          }
-          catch (Exception e)
-          {
-              // TODO Auto-generated catch block
-              e.printStackTrace();
-          }
-          response.sendRedirect("ErrorLogin.jsp");
+                //Execute query statement
+                ps.executeUpdate();
+
+                //Close connection
+                ps.close();
+                con.close();
+            } catch (Exception e) {
+                notes = "Registration Failed! Please try again.";
+            }
+            request.setAttribute("notes", notes);
+            //Indicator that data insertion is successful
+            request.getRequestDispatcher("/Register.jsp").forward(request, response);
+        }
     }
-
 
 }

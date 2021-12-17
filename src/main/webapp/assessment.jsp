@@ -24,19 +24,19 @@
             <h1 class="h-12 font-black text-pink-300 text-2xl">Assessment List</h1><br>
 
             <button class="sm:font-semibold text-purple-900 container border-2 p-1 appearance-none rounded-lg focus:outline-none focus:ring-2"
-                    type="submit" name="assessmentId"> <a href="/assessment/generalRisk?assessmentId=1&disease=diabetest1">Diabetes Type 1 Assessment</a> </button>
+                    type="submit" name="assessmentId"> <a href="assessment/generalRisk?assessmentId=1&disease=diabetest1">Diabetes Type 1 Assessment</a> </button>
             <button class="sm:font-semibold text-purple-900 container border-2 p-1 appearance-none rounded-lg focus:outline-none focus:ring-2"
-                    type="submit" name="assessmentId"> <a href="/assessment/generalRisk?assessmentId=2&disease=diabetest2">Diabetes Type 2 Assessment</a> </button>
+                    type="submit" name="assessmentId"> <a href="assessment/generalRisk?assessmentId=2&disease=diabetest2">Diabetes Type 2 Assessment</a> </button>
             <button class="sm:font-semibold text-purple-900 container border-2 p-1 appearance-none rounded-lg focus:outline-none focus:ring-2"
-                    type="submit" name="assessmentId"> <a href="/assessment/generalRisk?assessmentId=3&disease=cvd">General CVD Assessment (Cardiovascular Disease)</a> </button>
+                    type="submit" name="assessmentId"> <a href="assessment/generalRisk?assessmentId=3&disease=cvd">General CVD Assessment (Cardiovascular Disease)</a> </button>
             <button class="sm:font-semibold text-purple-900 container border-2 p-1 appearance-none rounded-lg focus:outline-none focus:ring-2"
-                    type="submit" name="assessmentId"> <a href="/assessment/generalRisk?assessmentId=4&disease=coldFlu">Is it Cold or Flu?</a> </button>
+                    type="submit" name="assessmentId"> <a href="assessment/generalRisk?assessmentId=4&disease=coldFlu">Is it Cold or Flu?</a> </button>
             <button class="sm:font-semibold text-purple-900 container border-2 p-1 appearance-none rounded-lg focus:outline-none focus:ring-2"
-                    type="submit" name="assessmentId"> <a href="/assessment/generalRisk?assessmentId=5&disease=covid">Covid Assessment</a> </button>
+                    type="submit" name="assessmentId"> <a href="assessment/generalRisk?assessmentId=5&disease=covid">Covid Assessment</a> </button>
             <button class="sm:font-semibold text-purple-900 container border-2 p-1 appearance-none rounded-lg focus:outline-none focus:ring-2"
-                    type="submit" name="assessmentId"> <a href="/assessment/generalRisk?assessmentId=6&disease=malaria">Malaria Assessment</a> </button>
+                    type="submit" name="assessmentId"> <a href="assessment/generalRisk?assessmentId=6&disease=malaria">Malaria Assessment</a> </button>
             <button class="sm:font-semibold text-purple-900 container border-2 p-1 appearance-none rounded-lg focus:outline-none focus:ring-2"
-                    type="submit" name="assessmentId"> <a href="/assessment/generalRisk?assessmentId=7&disease=sinusitis">Sinusitis Assessment</a> </button>
+                    type="submit" name="assessmentId"> <a href="assessment/generalRisk?assessmentId=7&disease=sinusitis">Sinusitis Assessment</a> </button>
         </div>
     </div>
 </body>

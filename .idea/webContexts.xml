@@ -3,6 +3,8 @@
   <component name="WebContextManager">
     <option name="state">
       <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/diabetesType1/diabetes1Report.jsp" value="file://$PROJECT_DIR$/src/main/webapp/diabetesType1" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/diabetesType2/diabetes2Assessment.jsp" value="file://$PROJECT_DIR$/src/main/webapp/diabetesType2" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/generalRiskFactor.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/regUserData.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
       </map>

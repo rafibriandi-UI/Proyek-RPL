@@ -38,33 +38,24 @@ public class generalRiskCalculatorServlet extends HttpServlet {
         request.setAttribute("bloodSugar", bloodSugar);
         request.setAttribute("existingDisease", existingDisease);
 
-        String error;
-        int genRisk;
+        switch (assessmentId) {
+            case 1:
+            case 2:
+                request.setAttribute("genRisk", generalRiskCalculator.calculate(assessmentId, physicalActivity, smoking, familyHistory, cholesterolLevel,
+                        systolicBP, diastolicBP, bloodSugar, existingDisease));
+                break;
+            case 3:
+                request.setAttribute("genRisk", generalRiskCalculator.calculate(assessmentId, physicalActivity, smoking, familyHistory, cholesterolLevel,
+                        "notCount", "notCount", "notCount", existingDisease));
+                break;
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+                request.setAttribute("genRisk", generalRiskCalculator.calculate(assessmentId, physicalActivity, smoking, "notCount", "notCount",
+                        "notCount", "notCount", "notCount", existingDisease));
+                break;
 
-        if(smoking.isBlank() || physicalActivity.isBlank() || familyHistory.isBlank()
-        || cholesterolLevel.isBlank() || systolicBP.isBlank() || diastolicBP.isBlank()
-        || bloodSugar.isBlank() || existingDisease.isBlank()) {
-            error = "One or more of the input boxes were blank. Try again.";
-
-            request.setAttribute("error", error);
-
-        } else {
-            switch (assessmentId) {
-                case 1:
-                case 2:
-                    request.setAttribute("genRisk", generalRiskCalculator.calculate(assessmentId, physicalActivity, smoking, familyHistory, cholesterolLevel,
-                            systolicBP, diastolicBP, bloodSugar, existingDisease));
-                case 3:
-                    request.setAttribute("genRisk", generalRiskCalculator.calculate(assessmentId, physicalActivity, smoking, familyHistory, cholesterolLevel,
-                            "notCount", "notCount", "notCount", existingDisease));
-                case 4:
-                case 5:
-                case 6:
-                case 7:
-                    request.setAttribute("genRisk", generalRiskCalculator.calculate(assessmentId, physicalActivity, smoking, "notCount", "notCount",
-                            "notCount", "notCount", "notCount", existingDisease));
-
-            }
         }
 
         getServletContext().getRequestDispatcher("/generalRiskFactor.jsp").forward(request, response);

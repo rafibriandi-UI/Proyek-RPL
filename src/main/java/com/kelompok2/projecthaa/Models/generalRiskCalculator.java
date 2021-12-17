@@ -90,8 +90,6 @@ public class generalRiskCalculator extends userData {
                 case "low":
                     risk2 = 3;
                     break;
-                default:
-                    throw new IllegalStateException("Unexpected value: " + physicalActivity);
             }
         }
 
@@ -109,8 +107,6 @@ public class generalRiskCalculator extends userData {
                 case "low":
                     risk3 = 1;
                     break;
-                default:
-                    throw new IllegalStateException("Unexpected value: " + familyHistory);
             }
         }
 
@@ -200,7 +196,16 @@ public class generalRiskCalculator extends userData {
             }
         }
 
-        result = ((risk1 + risk2 + risk3 + risk4 + risk5 + risk6 + risk7 + risk8) / sum) * 40;
+        result = ((risk1 + risk2 + risk3 + risk4 + risk5 + risk6 + risk7 + risk8) / sum) * 50;
+//        System.out.println(risk1);
+//        System.out.println(risk2);
+//        System.out.println(risk3);
+//        System.out.println(risk4);
+//        System.out.println(risk5);
+//        System.out.println(risk6);
+//        System.out.println(risk7);
+//        System.out.println(risk8);
+//        System.out.println(result);
         return result;
     }
 
@@ -348,7 +353,7 @@ public class generalRiskCalculator extends userData {
             }
         }
 
-        result = ((risk1 + risk2 + risk3 + risk4 + risk5 + risk6 + risk7 + risk8) / sum) * 40;
+        result = ((risk1 + risk2 + risk3 + risk4 + risk5 + risk6 + risk7 + risk8) / sum) * 30;
         return result;
     }
 

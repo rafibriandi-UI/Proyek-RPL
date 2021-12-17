@@ -33,20 +33,20 @@
                 <p class=" font-bold text-white text-center  py">ID</p>
 
                 <p class="text-center">
-                    <input class=" text-center rounded-lg" type="text" name="user_id"/>
+                    <input required class=" text-center rounded-lg" type="text" name="user_id"/>
                     <br/>
                 </p>
                 <p class="font-bold text-white  text-center ">Username</p>
                 <p class="text-center">
-                    <input class=" text-center rounded-lg " type="text" name="user_name"/>
+                    <input required class=" text-center rounded-lg " type="text" name="user_name"/>
                     <br/>
                 <p class="font-bold text-white text-center ">Email</p>
                 <p class="text-center">
-                    <input class=" text-center rounded-lg " type="text" name="user_email"/>
+                    <input required class=" text-center rounded-lg " type="email" name="user_email"/>
                     <br/>
                 <p class="font-bold text-white text-center ">Password</p>
                 <p class="text-center">
-                    <input class="text-center rounded-lg" type="password" name="user_password"/>
+                    <input required class ="text-center rounded-lg" type="password" name="user_password"/>
                     <br/><br/>
                 <p class="text-center">
                     Already have an account? Sign in
@@ -56,12 +56,14 @@
                 <div class="flex space-x-0">
 
                     <div class="px-48">
-                        <input type="submit" class="px-10 py-2 rounded-lg bg-pink-200 " value="SIGN IN">
+                        <button type="button" class="px-10 py-2 rounded-lg bg-pink-200 "><a href="index.jsp">SIGN IN</a></button>
                     </div>
                     <div class="px-0" >
-                        <input type="submit" class="px-10 py-2 rounded-lg bg-pink-200 " value="SIGN UP">
+                        <input type="submit" class="px-10 py-2 rounded-lg bg-pink-200 " name="login" value="SIGN UP">
                     </div>
                 </div>
+
+                ${notes}
 
                 <br>
                 <br>

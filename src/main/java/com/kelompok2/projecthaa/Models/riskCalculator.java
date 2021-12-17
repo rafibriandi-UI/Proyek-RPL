@@ -4,14 +4,6 @@ public class riskCalculator {
 
     static double result, sum, risk1, risk2, risk3, risk4, risk5, risk6, risk7;
 
-    private String symptoms1;
-    private String symptoms2;
-    private String symptoms3;
-    private String symptoms4;
-    private String symptoms5;
-    private String symptoms6;
-    private String symptoms7;
-
     public static double calculate(String disease, String symptoms1, String symptoms2, String symptoms3, String symptoms4,
                                    String symptoms5, String symptoms6, String symptoms7) {
         double value;
@@ -134,7 +126,7 @@ public class riskCalculator {
             }
         }
 
-        result = ((risk1 + risk2 + risk3 + risk4 + risk5) / sum) * 40;
+        result = ((risk1 + risk2 + risk3 + risk4 + risk5) / sum) * 50;
         return result;
         }
 
@@ -242,7 +234,7 @@ public class riskCalculator {
             }
         }
 
-        result = ((risk1 + risk2 + risk3 + risk4 + risk5 + risk6) / sum) * 40;
+        result = ((risk1 + risk2 + risk3 + risk4 + risk5 + risk6) / sum) * 60;
         return result;
     }
 
@@ -333,7 +325,7 @@ public class riskCalculator {
             }
         }
 
-        result = ((risk1 + risk2 + risk3 + risk4 + risk5) / sum) * 40;
+        result = ((risk1 + risk2 + risk3 + risk4 + risk5) / sum) * 70;
         return result;
     }
 
@@ -407,7 +399,7 @@ public class riskCalculator {
             }
         }
 
-        result = ((risk1 + risk2 + risk3 + risk4) / sum) * 40;
+        result = ((risk1 + risk2 + risk3 + risk4) / sum) * 70;
         return result;
     }
 
@@ -515,7 +507,7 @@ public class riskCalculator {
             }
         }
 
-        result = ((risk1 + risk2 + risk3 + risk4 + risk5 + risk6) / sum) * 40;
+        result = ((risk1 + risk2 + risk3 + risk4 + risk5 + risk6) / sum) * 70;
         return result;
     }
 
@@ -640,7 +632,7 @@ public class riskCalculator {
             }
         }
 
-        result = ((risk1 + risk2 + risk3 + risk4 + risk5 + risk6 + risk7) / sum) * 40;
+        result = ((risk1 + risk2 + risk3 + risk4 + risk5 + risk6 + risk7) / sum) * 70;
         return result;
     }
 

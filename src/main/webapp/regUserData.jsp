@@ -11,9 +11,9 @@
         <div class="max-w-lg mx-auto">
             <body>
 
-            <form method="post" action="/userData" class=" relative px-8 py-16 bg-purple-400 shadow-lg transform  sm:skew-y-0 sm:rounded-2xl">
+            <form method="post" action="userData" class=" relative px-8 py-16 bg-purple-400 shadow-lg transform  sm:skew-y-0 sm:rounded-2xl">
 
-                <h1 class="h-12 font-black text-purple-900 px-20 text-2xl">Your Personal Data <br></h1>
+                <h1 class="h-12 font-black text-purple-900 flex justify-center px-20 text-2xl">Your Personal Data <br></h1>
                 <p>${error}</p><br>
 
                 <div class="mx-20">
@@ -49,11 +49,10 @@
 
                     <p class="mx-20 py-2 pb-4 font-body flex text-white items-center">${bmiCondition}</p>
                 </div>
-                <button required type="submit" class="font-body text-white shadow-md container py-1 bg-purple-800 appearance-none rounded-lg focus:outline-none focus:ring-2">calculate BMI</button><br>
+                <button type="submit" class="font-body text-white shadow-md container py-1 bg-purple-800 appearance-none rounded-lg focus:outline-none focus:ring-2">calculate BMI</button><br>
                 <br>
+                ${bmi != null ? '<button formaction="/assessment.jsp" type="submit" class="font-body text-white shadow-md container py-1 bg-purple-800 appearance-none rounded-lg focus:outline-none focus:ring-2">Next</button><br>' : " "}
 
-                <button type="button" class="font-body text-white shadow-md container py-1 bg-purple-800 appearance-none rounded-lg focus:outline-none focus:ring-2"><a href="/assessment">Next</a></button>
-                <br>
 
             </form>
             </body>

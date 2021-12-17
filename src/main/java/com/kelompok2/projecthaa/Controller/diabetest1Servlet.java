@@ -39,30 +39,35 @@ public class diabetest1Servlet extends HttpServlet {
 
         double totalRisk = genRisk + risk;
 
-        request.setAttribute("totalrisk", totalRisk);
+        request.setAttribute("symptoms1", symptoms1);
+        request.setAttribute("symptoms2", symptoms2);
+        request.setAttribute("symptoms3", symptoms3);
+        request.setAttribute("symptoms4", symptoms4);
+        request.setAttribute("symptoms5", symptoms5);
+        request.setAttribute("totalRisk", totalRisk);
         if(totalRisk <= 30) {
             String color = "bg-green-400";
             String riskLevel = "Low Risk";
             request.setAttribute("color", color);
             request.setAttribute("riskLevel", riskLevel);
 
-            request.getRequestDispatcher("/diabetesType1/diabetes1Assessment.jsp").forward(request, response);
+            request.getRequestDispatcher("/diabetesType1/diabetes1Report.jsp").forward(request, response);
 
-        } else if (totalRisk <= 70 || totalRisk > 30) {
+        } else if (totalRisk <= 70) {
             String color = "bg-yellow-300";
             String riskLevel = "Medium Risk";
             request.setAttribute("color", color);
             request.setAttribute("riskLevel", riskLevel);
 
-            request.getRequestDispatcher("/diabetesType1/diabetes1Assessment.jsp").forward(request, response);
+            request.getRequestDispatcher("/diabetesType1/diabetes1Report.jsp").forward(request, response);
 
         } else if (totalRisk > 70) {
             String color = "bg-red-400";
-            String riskLevel = "High Risk!";
+            String riskLevel = "High Risk";
             request.setAttribute("color", color);
             request.setAttribute("riskLevel", riskLevel);
 
-            request.getRequestDispatcher("/diabetesType1/diabetes1Assessment.jsp").forward(request, response);
+            request.getRequestDispatcher("/diabetesType1/diabetes1Report.jsp").forward(request, response);
 
         }
     }

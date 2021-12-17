@@ -19,7 +19,7 @@
         <div class="max-w-lg mx-auto">
             <body>
 
-            <form method="post" action="/assessment/diabetest1" class="relative px-10 py-16 bg-purple-400 shadow-lg transform sm:rounded-2xl">
+            <form method="post" action="diabetest1" class="relative px-10 py-16 bg-purple-400 shadow-lg transform sm:rounded-2xl">
 
                 <h1 class="h-12 font-black text-purple-900 px-20 text-2xl">Diabetes Type 1 Assessment</h1>
                 <h2 class="h-2 font-bold text-purple-700 px-20 py-4 text-justify">Possible Symptomps</h2><br>
@@ -59,7 +59,7 @@
                     <option value="unsure">unsure</option>
                 </select><br>
 
-                <input id="genRisk" name="genRisk" value="${genRisk}">
+              <input id="genRisk" name="genRisk" value="${genRisk}">
                 <!--<label for="symptoms6" class="py-3 font-body flex text-lg text-white place-content-center">cold sweat and turning pale.</label>
                 <input class="p-1 appearance-none rounded-lg focus:outline-none focus:ring-2" type="number" id="symptoms6" name="symptoms6"><br>
 
@@ -68,13 +68,10 @@
                 -->
                 <br>
 
-                <button type="submit" class="font-body text-white shadow-md container py-1 bg-pink-200 appearance-none rounded-lg focus:outline-none focus:ring-2">submit</button>
+                <button type="submit" class="font-body text-white shadow-md container py-1 bg-pink-200 appearance-none rounded-lg focus:outline-none focus:ring-2">Generate Report</button>
 
-                <button type="button" class="font-body text-white shadow-md container py-1 bg-pink-200 appearance-none rounded-lg focus:outline-none focus:ring-2">
-                    <a href="/diabetesType1/diabetes1Report.jsp">Generate Report</a></button>
             </form>
 
-            ${totalRisk}
             </body>
         </div>
     </div>
